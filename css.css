@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+footer, header, nav, section { display: block; }
+
+span { font-size: 1.2vw; }
+
+h1 { color:#400080; font-size: 2vw; text-decoration: none; }
+
+p { font-size: 1.2vw; }
+
+
+
+/*fontsizeを10pxに*/html { font-size: 62.5%; scroll-behavior: smooth; }
+
+
+
+/*背景をネイビーに、margin初期化*/body { background-color:#16002d; margin: 0px; word-wrap: break-word; }
+
+
+
+/*ヘッダー中央寄せ*/header { text-align:center; }
+
+/*color,delay*/header a { color: #353535; transition: all 0.5s; }
+/*hovercoloring,*/header a:hover, header a:focus { color: #0093cb; text-decoration: none; }
+header p { color: #4d4d4d; word-spacing: 1px; line-height: 25px; font-size: 14px; transition: all 0.5s; word-wrap: break-word; }
+/*hovercoloring,*/header p:hover, header p:focus { color: #0093cb; text-decoration: none; }
+h2 { font-size: 1.2vw; color: #353535; transition: all 0.5s; }
+/*h2時青い下線*/header h2::after { content: " "; border: solid 1px #0093cb; display: block; width: 55px; margin: 15px auto; }
+
+/*タイトルマージン*/.title { margin:17% 20% 3% 20%; }
+
+/*サブタイフォント種類・枠線・内側の空間・色・角の丸み・大文字化・文字間・インラインブロック化・マージン上下・フォントサイズ*/.subtitle { font-family: Varela Round; border: 1px solid #fff; padding: 20px 40px; color: #fff; border-radius: 5px; text-transform: uppercase; letter-spacing: 3px; display: inline-block; margin-top: 60px; margin-bottom: 120px; font-size: 2rem; }
+
+
+
+.main { display: flex; }
+
+
+#sidenavi { width: 12vw; background-color: #111; }
+.navi { color: #aaa !important; padding: 2vw 3vw 2vw 3vw; position: -webkit-sticky; position: sticky; top: 3vw; }
+nav { margin: 7vw auto 0vw; }
+.mgn { margin: 1px 1vw; text-align: center; text-decoration: none; }
+
+
+.space { width: 10vw; background-color:#16002d; }
+
+
+
+#content { width:78vw; margin:0px; }
+
+
+/*6個を格納するdivのサイズ指定*/.container { margin-bottom:120px; padding:10vw 10vw 5vw 3vw; }
+
+/*6個を中央寄せ・margin初期化*/ul { padding: 0; margin-block-start: 0; margin-block-end: 0; list-style: none; }
+li { text-align: center; }
+
+/*写真サイズ６等分*/.six { position:relative;/*相対位置*/ min-height:1px; float:left; width:33.33333333%; }
+
+/*写真順番に表示*/
+.delay-15s { animation-delay: 1.5s; }
+.delay-2s { animation-delay: 2s; }
+.delay-25s { animation-delay: 2.5s; }
+.delay-3s { animation-delay: 3s; }
+.delay-35s { animation-delay: 3.5s; }
+.delay-4s { animation-delay: 4s; }
+
+/*unnecessary*/ .no-margin { padding: 0px; margin: 0px; }
+/*変化時間・条件前後にアニメーション適用*/ .animated { animation-duration: 1s; animation-fill-mode: both; }
+/*opacity: 不透明度; 透明から不透明に, transform: 移動位置(Y軸)*/ @keyframes fadeInDown { 0% { opacity: 0; transform: translateY(-100px); } 100% { opacity: 1; transform: translateY(0); } }
+/* faddeInDownをimport, ボックス表示*/ .fadeInDown { animation-name: fadeInDown; visibility: visible; }
+/*文字サイズ*/.overlay-effect .img { font-size: 30px; }
+/*overlay適用範囲*/.overlay-effect .overlay { bottom: 0; left: 0; right: 0; width: 100%; height: 100%; opacity: 0; }
+/*expand適用範囲(リンク)*/.overlay-effect .overlay a.expand { left: 0; right: 0; bottom: 0; top: 0; margin: 0 auto 0 auto; }
+/*unnecessary*/.overlay-effect .img:hover .overlay { height: 100%; opacity: 1; }
+/*写真位置調整*/.effects { padding-left: 15px; }
+/*相対位置・マージン初期化・重なり順序指定・重なり部分は隠す*/.effects .img { position: relative; margin-bottom: 0px; z-index: 1; overflow: hidden; }
+/*サイズ合わせる・*/.img img { width: calc(100% + 40px) !important; }
+/*位置調整*/.effects .img:nth-child(n) { margin-right: 5px; }
+/*位置調整*/.effects .img:first-child { margin-left: -15px; }
+/*位置調整*/.effects .img:last-child { margin-right: 0; }
+/*１段目と２段目の隙間なくす。マージン初期化*/.effects .img img { display: block; margin: 0; padding: 0; height: auto; }
+/*ブロック化*/.overlay a {display: block; }
+/*絶対位置・重なり順序・色と透明度・余分は隠す・すべてのプロパティが0.5sで変化・フォントの種類・字間・横幅*/.overlay { display: block; position: absolute; z-index: 20; background: rgba(100, 100, 100, 0.8); overflow: hidden; transition: all 0.5s; font-family: 'Raleway'; letter-spacing: 1px; font-weight: normal !important;}
+/*画像内文字の下に下線*/.overlay a span:before { content: " "; display: block; margin: 20% auto; }
+/*画像内文字の下に下線*/.overlay a span:after { content: " "; border: solid 2px #0093cb; display: block; width: 55px; margin: 5px auto; margin-bottom: 15px; }
+/*ブロック化・絶対位置・重なり順序・センタリング・フォントの色幅サイズ・大文字化・行の高さ*/a.expand { display: block; position: absolute; z-index: 100; text-align: center; color: #0093cb; font-weight: 600; font-size: 14px; text-transform: uppercase; line-height: 30px; }
+/*位置調整*/.clearfix:before,.clearfix:after,.container:before,.container:after { content:" "; display:table; }
+/*セクション以下の位置調整*/.clearfix:after,.container:after { clear:both; }
+.expand { text-decoration: none; }
+
+
+.imagefile { display: inline-block; float: left; margin: 5% 5% auto 5%; height: 15vw; width: 25vw; }
+.text { display: inline-block; float: right; width: 30vw; margin: 3% 10% 0 0; }
+
+.content1 {
+	clear:both;
+	background-color: #cb54fe;
+	height: 36vw;
+	width: 100%;
+}
+
+
+.content2 {
+	clear:both;
+	background-color: #80ff80;
+	height: 36vw;
+	width: 100%;
+}
+
+
+.content3 {
+	clear:both;
+	background-color: #8080c0;
+	height: 36vw;
+	width: 100%;
+}
+
+
+.content4 {
+	clear:both;
+	background-color: #cf72a0;
+	height: 36vw;
+	width: 100%;
+}
+
+
+.content5 {
+	clear:both;
+	background-color: #339966;
+	height: 36vw;
+	width: 100%;
+}
+
+.content6 {
+	clear:both;
+	background-color: #999933;
+	height: 36vw;
+	width: 100%;
+}
+
+
+
+
+.about {
+	clear:both;
+	background-color: #c0c0c0;
+	width: 100%;
+}
+
+.people {
+	color: #000;
+	padding: 2vw 25vw 2vw 2vw;
+	height: 170vw; }
+
+table { font-size:1vw; padding:3vw;}
+
+
+
+
+.product {
+	color: #000;
+	padding: 2vw;
+	height: 180vw;
+}
+
+.product1 {
+	clear:both;
+	height: 30vw;
+	width: 100%;
+}
+
+.product2 {
+	clear:both;
+	height: 30vw;
+	width: 100%;
+}
+
+.product3 {
+	clear:both;
+	height: 36vw;
+	width: 100%;
+}
+
+.product4 {
+	clear:both;
+	height: 36vw;
+	width: 100%;
+}
+
+.product5 {
+	clear:both;
+	height: 36vw;
+	width: 100%;
+}
+
+
+
+footer { clear:both; text-align: center; color: #8c9398; background-color: #242830 !important; padding: 40px 0px !important; }
+footer a { color: #a1a9b0; display: inline; margin: 0px 10px; }
+footer a:hover, footer a:focus { color: #0093cb; text-decoration: none; }
+footer p:hover, footer p:focus { color: #0093cb; text-decoration: none; }
+footer h2::after { content: " "; border: solid 1px #0093cb; display: block; width: 55px; margin: 15px auto; }
